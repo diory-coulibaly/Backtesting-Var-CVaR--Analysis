@@ -8,6 +8,12 @@ import math
 
 st.set_page_config(page_title="Advanced VaR & CVaR Dashboard", layout="wide")
 st.title("📊 Advanced VaR, CVaR & Backtesting Dashboard")
+from PIL import Image
+
+st.markdown("### 📋 Template Format Preview")
+image = Image.open("CombinedPrices.JPG")
+st.image(image, caption="Expected structure of CombinedPrices.csv (Date + Stocks + Factors)", use_container_width=True)
+
 
 # Sidebar
 st.sidebar.header("📁 Upload CombinedPrices.csv")
