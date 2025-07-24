@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: var_cvar_analysis_advanced_all_backtesting
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run var_cvar_analysis_advanced_all_backtesting.py --server.port 8080 --server.enableCORS false
