@@ -26,7 +26,7 @@ use_student_t = st.sidebar.checkbox("Use Student-t Distribution (fat tails)", va
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, sep=";")
-    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    df["Date"] = pd.to_datetime(df['Date'], format='%d/%m/%Y', errors="coerce")
     df = df.dropna(subset=["Date"]).sort_values("Date").reset_index(drop=True)
 
     for col in df.columns[1:]:
